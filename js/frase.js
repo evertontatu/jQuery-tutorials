@@ -58,7 +58,7 @@ function sincronizaPlacar(){
 
   linhas.each(function(){
     let usuario = $(this).find("td:nth-child(1)").text();
-    let palavras = $(this).find("td:nth-child(1)").text();
+    let palavras = $(this).find("td:nth-child(2)").text();
 
     let score = {
       usuario: usuario,

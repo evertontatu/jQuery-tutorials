@@ -8,6 +8,7 @@ $(function() {
     inicializaMarcadores();
     $('#botao-reiniciar').click(reiniciaJogo);
     $('.botao-remover').click(removeLinha);
+    atualizaPlacar();
 });
 
 function atualizaTempoInicial(tempo){

@@ -54,3 +54,13 @@ $("#botao-placar").click(mostraPlacar);
 function mostraPlacar(){
   $(".placar").stop().slideToggle(600);
 }
+
+function atualizaPlacar(){
+  $.get("http://localhost:3000/placar", function(data){
+    $(data).each(function(){
+      let linha = novaLinha(this.usuario, this.pontos);
+      linha.find(".botao-remover").click(removeLinha);
+      $("tbody").append(linha);
+    });
+  });
+}
